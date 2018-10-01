@@ -24,4 +24,24 @@
         <servlet-name>iterator</servlet-name>
         <url-pattern>/iterator</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>brands</servlet-name>
+        <servlet-class>ru.innopolis.stc13.controller.BrandServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>brands</servlet-name>
+        <url-pattern>/brands</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>mobiles</servlet-name>
+        <servlet-class>ru.innopolis.stc13.controller.PhonesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mobiles</servlet-name>
+        <url-pattern>/phones</url-pattern>
+    </servlet-mapping>
 </web-app>

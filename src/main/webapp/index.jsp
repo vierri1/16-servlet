@@ -11,12 +11,7 @@
     <title>$Title$</title>
 </head>
 <body>
-<a href="/hello">Hello</a>
-<a href="/iterator">Iterator</a>
-<BR><BR>
-<form action="/hello" method="get">
-    <input type="text" name="testText">
-    <input type="submit">
-</form>
+<a href="/brands">Телефоны по брендам</a>
+
 </body>
 </html>
