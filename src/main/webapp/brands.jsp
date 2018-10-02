@@ -7,11 +7,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Brands list</title>
-</head>
-<body>
+<%@include file="header.jsp"%>
+
 <H1>Список брендов телефонов в продаже:</H1>
 <%
     List<Brand> list = (List<Brand>) request.getAttribute("brands");
@@ -21,5 +18,5 @@
 <%
     }
 %>
-</body>
-</html>
+<a href="/addbrand.jsp">Добавить бренд</a>
+<%@include file="footer.jsp"%>

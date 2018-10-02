@@ -4,10 +4,7 @@ import ru.innopolis.stc13.pojo.Brand;
 import ru.innopolis.stc13.repository.connectionManager.ConnectionManager;
 import ru.innopolis.stc13.repository.connectionManager.ConnectionManagerJdbcImpl;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,5 +34,21 @@ public class BrandDaoImpl implements BrandDao {
             e.printStackTrace();
         }
         return result;
+    }
+
+    @Override
+    public boolean add(Brand manufacture) {
+        try (
+                Connection connection = connectionManager.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(
+                        "INSERT INTO manufacturer VALUES (DEFAULT, ?, ?)")) {
+            preparedStatement.setString(1, manufacture.getName());
+            preparedStatement.setString(2, manufacture.getCountry());
+            preparedStatement.execute();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

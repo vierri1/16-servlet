@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface BrandDao {
     List<Brand> getBrandList();
+    boolean add(Brand brand);
 }
